@@ -86,9 +86,8 @@ body {
 }
 
 #loginArea a {
-  color: var(--green);
-  font-size: .8rem;
-  margin-top: .9rem;
+  color: var(--red);
+  font-size: .7rem;
 }
 
 /*----- DESTINATION -----*/

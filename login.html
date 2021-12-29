@@ -7,6 +7,7 @@
     <title>Retirada de Material</title>
 
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/buttonsStyle.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,41 +17,36 @@
     />
   </head>
   <body>
-
     <div id="loginContainer">
-
       <div id="loginArea">
-
         <img src="assets/logoIcon.svg" alt="logo" />
         <h1>Retirada de Material</h1>
 
-        <form action="">
+        <div class="buttonContainer">
+          <form action="">
+            <label for="login">
+              <input type="text" id="login" name="login" placeholder="login" />
+            </label>
 
-          <label for="login">
-            <input type="text" id="login" name="login" placeholder="login" />
-          </label>
+            <label for="password">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="senha"
+              />
+            </label>
+          </form>
+          <button id="submitButton" class="green" type="submit">login</button>
 
-          <label for="password">
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="senha"
-            />
-          </label>
-
-        </form>
-
-        <a
-          href="https://wa.me/5583999802317?text=Eu%20estou%20com%20problemas%20no%20login"
-          target="_blank"
-        >
-          não consigo acessar
-        </a>
-
+          <a
+            href="https://wa.me/5583999802317?text=Eu%20estou%20com%20problemas%20no%20login"
+            target="_blank"
+          >
+            não consigo acessar
+          </a>
+        </div>
       </div>
-
     </div>
-    
   </body>
 </html>
