@@ -1,4 +1,4 @@
-//const { default: axios } = require("axios");
+//? const { default: axios } = require("axios");
 
 const submitButton = document.querySelector("#submitButton");
 let stateSearch = document.querySelector("#state");
@@ -12,36 +12,43 @@ submitButton.addEventListener("click", run);
 
 function run(event) {
   event.preventDefault();
-  
+
+  //* GETTING VALUES OF INPUT FIELDS
   stateSearch = stateSearch.value;
-  
   citySearch = citySearch.value;
-  citySearch = citySearch.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-  citySearch = citySearch.replace(" ", "%20");
+  date = dateSearch.value;
 
-  date = dateSearch.value
-  console.log(date)
+  //* VERIFYING IF ALL FIELDS ARE NOT FILLED
+  if (stateSearch == "" || citySearch == "" || date == "") {
+    window.alert("confira se os campos foram preenchidos corretamente");
+    location.reload();
+  } else {
+    citySearch = citySearch.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    citySearch = citySearch.replace(" ", "%20");
 
-  axios
-    .get(`https://viacep.com.br/ws/${stateSearch}/${citySearch}/rua/json/`)
-    .then(function (response) {
-      if (response.data.error) {
-        throw new Error();
-      }
-      state = response.data[0].uf;
-      city = response.data[0].localidade;
+    axios
+      .get(`https://viacep.com.br/ws/${stateSearch}/${citySearch}/rua/json/`)
+      .then(function (response) {
+        if (response.data.error) {
+          throw new Error();
+        }
+        state = response.data[0].uf;
+        city = response.data[0].localidade;
 
-      console.log(state);
-      console.log(city);
-      return state, city;
-    });
+        return state, city;
+      });
 
-  return stateSearch, citySearch;
+    return stateSearch, citySearch;
+  }
 }
 
-/* para resolver 
+/* 
+TODO: para resolver 
 
-- como exportar as funções state e city para fora do e usar em outras funções
+* ajustar o texto dentro dos botões cidade e estado
+* assegurar o preenchimento dos dados
+
+! como exportar as variáveis: state, city e date para fora do escopo e usar em outras funções
 
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Functions
 
