@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Retirada de Material</title>
+
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="assets/logoIconSmall.svg" alt="logo" />
+      <h1 class="title">Retirada de Material</h1>
+    </header>
+    <main>
+      <label for="city">
+        Cidade destino: <span>(ultima cidade da rota)</span>
+      </label>
+      <input id="city" type="text" name="city" />
+      
+      <label for="state">
+        Estado destino:
+      </label>
+      <input id="state" type="text" name="state" />
+    </main>
+
+    <button id="submitButton" type="submit">Continuar</button>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="destination.js"></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+/*----- RESET -----*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*----- VARIABLES -----*/
+
+:root {
+  --green: hsl(130, 31%, 60%);
+  --grey: hsl(0, 0%, 41%);
+  --white: hsl(0, 0%, 99%);
+  --black: hsl(0, 0%, 17%);
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--white);
+}
+
+/*----- LOGIN AREA -----*/
+
+#loginContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loginArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#loginArea img {
+  width: 6.25rem;
+  
+}
+
+#loginArea h1 {
+  margin-top: .9rem;
+  margin-bottom: 2.31rem;
+  font-size: 1.6rem;
+  color: var(--grey);
+}
+
+#loginArea form {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+#loginArea form input {
+  width: 16.5rem;
+  height: 3rem;
+  border-radius: .4rem;
+  cursor: pointer;
+  border: .0625rem solid var(--grey);
+}
+
+#loginArea form input::placeholder {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--green);
+}
+
+#loginArea a {
+  color: var(--green);
+  font-size: .8rem;
+  margin-top: .9rem;
+}
