@@ -7,6 +7,7 @@
     <title>Retirada de Material</title>
 
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/buttonsStyle.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,25 +17,36 @@
     />
   </head>
   <body>
-    <header>
-      <img src="assets/logoIconSmall.svg" alt="logo" />
-      <h1 class="title">Retirada de Material</h1>
-    </header>
-    <main>
-      <label for="city">
-        Cidade destino: <span>(ultima cidade da rota)</span>
-      </label>
-      <input id="city" type="text" name="city" />
+    <div id="destinationContainer">
+      <header id="destinationHeader">
+        <img src="assets/logoIconSmall.svg" alt="logo" />
+        <h1 class="title">Retirada de Material</h1>
+      </header>
+
+      <main id="destinationMain">
+        <form class="inputContent">
+          <label for="city">
+            Cidade destino: <span>(ultima cidade da rota)</span>
+          </label>
+          <input id="city" type="text" name="city" />
+          <label for="state"> Estado destino: </label>
+          <input id="state" type="text" name="state" />
+          <label for="date"> Data da Retirada: </label>
+          <input id="date" type="date" name="date" />
+        </form>
+      </main>
+
       
-      <label for="state">
-        Estado destino:
-      </label>
-      <input id="state" type="text" name="state" />
-    </main>
-
-    <button id="submitButton" type="submit">Continuar</button>
-
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="destination.js"></script>
+      <div class="buttonContainer">
+        <button id="submitButton" class="green" type="submit">
+          seguir com solicitação
+        </button>
+        <button id="submitButton" class="red" type="submit">
+          estou com problema
+        </button>
+      </div>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="destination.js"></script>
+    </div>
   </body>
 </html>
