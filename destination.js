@@ -42,4 +42,8 @@ function run(event) {
 
 - como exportar as funções state e city para fora do e usar em outras funções
 
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Functions
+
+https://github.com/huannvictor/consultCEP/blob/99e94806c346aeb7647e1869b528a351a92a61d2/app.js
+
 */
