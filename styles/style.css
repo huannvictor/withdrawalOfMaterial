@@ -1,4 +1,4 @@
-/*----- RESET -----*/
+/* *----- RESET -----* */
 
 * {
   margin: 0;
@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-/*----- VARIABLES -----*/
+/* *----- VARIABLES -----* */
 
 :root {
   --green: hsl(130, 31%, 60%);
@@ -23,7 +23,7 @@ body {
   background: var(--white);
 }
 
-/*----- LOGIN AREA -----*/
+/* *----- LOGIN -----* */
 
 #loginContainer {
   width: 100vw;
@@ -76,9 +76,8 @@ body {
   font-size: 0.7rem;
 }
 
-/*----- DESTINATION -----*/
-
-#destinationHeader {
+/* *----- HEADER -----* */
+Header {
   position: absolute;
   width: 100vw;
   display: flex;
@@ -89,12 +88,14 @@ body {
   background: var(--light-green);
 }
 
-#destinationHeader h1 {
+Header h1 {
   font-size: 1.6rem;
   color: var(--grey);
 }
 
-#destinationMain {
+/* *----- MAIN -----* */
+
+Main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,22 +104,11 @@ body {
   height: 75vh;
 }
 
-#destinationMain span {
+Main #tableCheckSolicitations {
+  height: auto;
+}
+
+Main span {
   font-size: 0.8rem;
   font-style: italic;
-}
-
-#destinationMain .inputContent input {
-  height: 2.25rem;
-  border-radius: 0.4rem;
-  border: 0.0625rem solid var(--grey);
-}
-
-#destinationMain .inputContent input[type="date" i],
-#destinationMain .inputContent input[type="text" i] {
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 300;
-  color: var(--grey);
 }
