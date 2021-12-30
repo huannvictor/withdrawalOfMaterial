@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Retirada de Material</title>
+
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/buttonsStyle.css" />
+    <link rel="stylesheet" href="styles/inputStyle.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="destinationContainer">
+      <header id="destinationHeader">
+        <img src="assets/logoIconSmall.svg" alt="logo" />
+        <h1 class="title">Retirada de Material</h1>
+      </header>
+
+      <main id="destinationMain">
+        <form class="inputContent">
+          
+          <label for="quant">Quantidade</label>
+          <input type="text" id="quant" name="quant">
+
+          <label for="unit">Unidade(s)</label>
+          <input type="number" id="unit" name="unit">
+
+          <label for="item">Item(ns)</label>
+          <input type="text" id="item" name="item">
+
+          <label for="segment">Segmento</label>
+          <input type="text" id="segment" name="segment">
+
+        </form>
+      </main>
+
+
+      <div class="buttonContainer">
+        <button id="submitButton" class="blue" type="submit">
+          adicionar à solicitação
+        </button>
+        <button id="submitButton" class="green" type="submit">
+          seguir com solicitação
+        </button>
+        <button id="submitButton" class="red" type="submit">
+          estou com problema
+        </button>
+
+      </div>
+
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="destination.js"></script>
+    </div>
+  </body>
+</html>

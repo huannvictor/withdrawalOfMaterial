@@ -12,6 +12,7 @@
   --green: hsl(130, 31%, 60%);
   --light-green: hsl(130, 79%, 94%);
   --red: hsl(0, 51%, 59%);
+  --blue: hsl(220, 31%, 60%);
   --grey: hsl(0, 0%, 41%);
   --white: hsl(0, 0%, 99%);
   --black: hsl(0, 0%, 17%);
@@ -20,19 +21,6 @@
 body {
   font-family: "Poppins", sans-serif;
   background: var(--white);
-}
-
-/*----- INPUT CONTENT -----*/
-
-.inputContent {
-  display: flex;
-  flex-direction: column;
-  max-width: 20rem;
-}
-
-.inputContent label {
-  font-size: 1.2rem;
-  color: var(--grey);
 }
 
 /*----- LOGIN AREA -----*/

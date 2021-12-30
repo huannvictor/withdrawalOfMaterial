@@ -24,3 +24,8 @@ button.red {
   background: var(--red);
   color: var(--white);
 }
+
+button.blue {
+  background: var(--blue);
+  color: var(--white);
+}
