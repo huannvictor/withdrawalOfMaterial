@@ -4,10 +4,9 @@ const submitButton = document.querySelector("#submitButton");
 let stateSearch = document.querySelector("#state");
 let citySearch = document.querySelector("#city");
 let dateSearch = document.querySelector("#date");
-let state;
-let city;
-let date;
 
+var date;
+/*
 submitButton.addEventListener("click", run);
 
 function run(event) {
@@ -22,25 +21,40 @@ function run(event) {
   if (stateSearch == "" || citySearch == "" || date == "") {
     window.alert("confira se os campos foram preenchidos corretamente");
     location.reload();
-  } else {
-    citySearch = citySearch.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    citySearch = citySearch.replace(" ", "%20");
-
-    axios
-      .get(`https://viacep.com.br/ws/${stateSearch}/${citySearch}/rua/json/`)
-      .then(function (response) {
-        if (response.data.error) {
-          throw new Error();
-        }
-        state = response.data[0].uf;
-        city = response.data[0].localidade;
-
-        return state, city;
-      });
-
-    return stateSearch, citySearch;
   }
+  citySearch = citySearch.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  citySearch = citySearch.replace(" ", "%20");
+
+  //* USING AXIOS TO GET THE CITY AND STATE CORRECTLY
+  axios
+    .get(`https://viacep.com.br/ws/${stateSearch}/${citySearch}/rua/json/`)
+    .then(function (response) {
+      if (response.data.error) {
+        throw new Error();
+      }
+
+      var destinationOutput = [];
+
+      destinationOutput.push(response.data[0].uf);
+      destinationOutput.push(response.data[0].localidade);
+
+      teste.innerHTML = "";
+
+      createLine(destinationOutput);
+      createLine(destinationOutput.length);
+      return destinationOutput;
+    });
 }
+
+//* FUNCTION TO TEST IF THE CITY AND STATE ARE GETTING COUTH
+function createLine(text) {
+  var line = document.createElement("p");
+  var text = document.createTextNode(text);
+
+  line.appendChild(text);
+  teste.appendChild(line);
+}
+*/
 
 /* 
 TODO: para resolver 
