@@ -29,3 +29,8 @@ button.blue {
   background: var(--blue);
   color: var(--white);
 }
+
+button.changeButton{
+  font-size: .7rem;
+  height: 1.8rem;
+}

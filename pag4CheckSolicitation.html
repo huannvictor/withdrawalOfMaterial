@@ -26,33 +26,90 @@
       </header>
 
       <main id="tableCheckSolicitations">
-        <table>
-          <caption>
-            Conferência Retirada de Material
-          </caption>
-          <thead>
-            <tr>
+
+        <div id="destinationArea" class="tableContainer">
+          <table>
+            <caption>
+              Confira a localidade
+            </caption>
+            <thead>
               <th scope="col">Destino informado</th>
               <th scope="col">Data informada</th>
-            </tr>
+            </thead>
+            <tbody>
+              <td scope="row">João pessoa</td>
+              <td scope="row">27/12/2021</td>
+            </tbody>
+          </table>
+          <button id="changeButtonDestination" class="changeButton blue" type="submit">
+            alterar informações de destino
+          </button>
+        </div>
+
+        <div id="itemsArea" class="tableContainer">
+          <table>
+          <caption>
+            Confira os itens
+          </caption>
+
+          <thead>
+            <th>Qtd</th>
+            <th>Unid</th>
+            <th>Item</th>
+            <th>Segmento</th>
           </thead>
           <tbody>
             <tr>
-              <td scope="row">João pessoa</td>
-              <td scope="row">27/12/2021</td>
+              <td>10</td>
+              <td>CX</td>
+              <td>RCN 122</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>CX</td>
+              <td>Kit Mestre - Sucesso</td>
+              <td>Caixa 1</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>CX</td>
+              <td>Kit especial Construindo e Aprendendo</td>
+              <td>Caixa 1</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>CX</td>
+              <td>Kit especial Construindo e Aprendendo</td>
+              <td>Caixa 1</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>CX</td>
+              <td>Kit especial Construindo e Aprendendo</td>
+              <td>Caixa 1</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>CX</td>
+              <td>Kit especial Construindo e Aprendendo</td>
+              <td>Caixa 1</td>
             </tr>
           </tbody>
-        </table>
+          </table>
+          <button id="changeButtonItems" class="changeButton blue" type="submit">
+            alterar ou excluir algum item
+          </button>
+        </div>
+
       </main>
 
       <div class="buttonContainer">
-        <button id="submitButton" class="blue" type="submit">
-          adicionar à solicitação
-        </button>
-        <button id="submitButton" class="green" type="submit">
+        
+        <button class="green" type="submit">
           seguir com solicitação
         </button>
-        <button id="submitButton" class="red" type="submit">
+        <button class="red" type="submit">
           estou com problema
         </button>
       </div>
